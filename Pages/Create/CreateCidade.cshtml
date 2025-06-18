@@ -1,0 +1,15 @@
+﻿@page
+@model AT_CSharp_DB.Pages.Create.CreateCidadeModel
+@{
+}
+
+<form method="post">
+    <label for="name">Nome da cidade</label>
+    <input name="nomeCidade" type="text"/>
+    <span asp-validation-for="nomeCidade"></span><br>
+    <button type="submit">Enviar</button>
+    @if (Model.mensagem != null)
+    {
+        <div class="alert alert-success">@Model.mensagem</div>
+    }
+</form>

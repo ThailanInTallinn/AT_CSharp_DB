@@ -1,0 +1,14 @@
+﻿@page "/Routes/ClienteDetails/{id}"
+@model AT_CSharp_DB.Routes.ClienteDetailsModel
+@{
+}
+
+@if (Model.clienteSelecionado != null)
+{
+    <p>Nome: @Model.clienteSelecionado.Nome</p>
+    <p>E-mail: @Model.clienteSelecionado.Email</p>
+    <p>ID: @Model.clienteSelecionado.ID</p>
+    <p>Logradouro: @Model.clienteSelecionado.EnderecoCliente.logradouro</p>
+    <p>Cidade: @Model.clienteSelecionado.EnderecoCliente.cidade</p>
+    <p>País: @Model.clienteSelecionado.EnderecoCliente.pais</p>
+}

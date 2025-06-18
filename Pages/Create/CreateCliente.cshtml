@@ -1,0 +1,34 @@
+﻿@page
+@model AT_CSharp_DB.Pages.Create.CreateClienteModel
+@{
+}
+
+<form method="post">
+    <label asp-for="Cliente.Nome">Nome</label>
+    <input asp-for="Cliente.Nome" type="text" /><br />
+    <span asp-validation-for="Cliente.Nome"></span><br />
+    <label asp-for="Cliente.Email">Email</label>
+    <input asp-for="Cliente.Email" type="text" /><br />
+    <span asp-validation-for="Cliente.Email"></span><br />
+    <label asp-for="Cliente.EnderecoCliente.logradouro">Rua</label>
+    <input asp-for="Cliente.EnderecoCliente.logradouro" type="text" /><br />
+    <span asp-validation-for="Cliente.EnderecoCliente.logradouro"></span><br />
+    <label asp-for="Cliente.EnderecoCliente.cidade">Cidade</label>
+    <input asp-for="Cliente.EnderecoCliente.cidade" type="text" /><br />
+    <span asp-validation-for="Cliente.EnderecoCliente.cidade"></span><br />
+    <label asp-for="Cliente.EnderecoCliente.pais">País</label>
+    <input asp-for="Cliente.EnderecoCliente.pais" type="text" /><br />
+    <span asp-validation-for="Cliente.EnderecoCliente.pais"></span><br />
+    <button type="submit">Cadastrar</button>
+</form>
+
+
+
+@if(Model.mensagem != null)
+{
+    <span class="alert">@Model.mensagem</span>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,19 @@
+﻿@page
+@model AT_CSharp_DB.Pages.ViewNotesModel
+@{
+}
+
+<form method="post">
+    <label>Digite a sua mensagem: </label><br />
+    <textarea rows="4" cols="50" asp-for="mensagem"></textarea>
+    <button type="submit">Enviar</button>
+</form>
+<ul>
+
+    
+    @foreach(var item in Model.listaDeMensagens)
+    {
+        <li>@item</li>
+    }
+
+</ul>
